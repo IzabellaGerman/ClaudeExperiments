@@ -1,0 +1,31 @@
+<Application x:Class="ShoppingPlanner.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModel="clr-namespace:ShoppingPlanner.MVVM.ViewModel"
+             xmlns:view="clr-namespace:ShoppingPlanner.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:StoresViewModel}">
+                <view:StoresView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ProductsViewModel}">
+                <view:ProductsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:DeliveryViewModel}">
+                <view:DeliveryView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:PaymentViewModel}">
+                <view:PaymentView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:SummaryViewModel}">
+                <view:SummaryView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
