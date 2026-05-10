@@ -1,4 +1,1 @@
-Start commit for Claide code
-march, 2026
-
-The planner 
+Sandbox for AI-assisted development experiments
